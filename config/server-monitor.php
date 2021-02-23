@@ -9,9 +9,11 @@ return [
      */
     'checks' => [
         'diskspace' => Spatie\ServerMonitor\CheckDefinitions\Diskspace::class,
-        'elasticsearch' => Spatie\ServerMonitor\CheckDefinitions\Elasticsearch::class,
-        'memcached' => Spatie\ServerMonitor\CheckDefinitions\Memcached::class,
-        'mysql' => Spatie\ServerMonitor\CheckDefinitions\MySql::class,
+        // 'elasticsearch' => Spatie\ServerMonitor\CheckDefinitions\Elasticsearch::class,
+        // 'memcached' => Spatie\ServerMonitor\CheckDefinitions\Memcached::class,
+        // 'mysql' => Spatie\ServerMonitor\CheckDefinitions\MySql::class,
+        'nginx' => \App\Tasks\Nginx::class,
+        'domain' => \App\Tasks\Domain::class,
     ],
 
     /*
@@ -54,7 +56,7 @@ return [
 
         // Separate the email by , to add many recipients
         'mail' => [
-            'to' => 'your@email.com',
+            'to' => 'mabhelitc@gmail.com',
         ],
 
         'slack' => [
@@ -100,7 +102,7 @@ return [
      * Thresholds for disk space's alert.
      */
     'diskspace_percentage_threshold' => [
-        'warning' => 80,
+        'warning' => 85,
         'fail' => 90,
     ],
 ];
