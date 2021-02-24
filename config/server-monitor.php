@@ -42,10 +42,10 @@ return [
     'notifications' => [
 
         'notifications' => [
-            Spatie\ServerMonitor\Notifications\Notifications\CheckSucceeded::class => ['mail'],
-            Spatie\ServerMonitor\Notifications\Notifications\CheckRestored::class => ['mail'],
-            Spatie\ServerMonitor\Notifications\Notifications\CheckWarning::class => ['mail'],
-            Spatie\ServerMonitor\Notifications\Notifications\CheckFailed::class => ['mail'],
+            Spatie\ServerMonitor\Notifications\Notifications\CheckSucceeded::class => [],
+            Spatie\ServerMonitor\Notifications\Notifications\CheckRestored::class => [],
+            Spatie\ServerMonitor\Notifications\Notifications\CheckWarning::class => [],
+            Spatie\ServerMonitor\Notifications\Notifications\CheckFailed::class => [],
         ],
 
         /*

@@ -1,0 +1,18 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.card {
+    @apply bg-white shadow rounded-lg p-4;
+}
+
+table th {
+    @apply px-2 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider;
+}
+
+table td {
+    @apply px-2 py-4 whitespace-nowrap;
+}
+

@@ -31433,6 +31433,38 @@ select {
           animation: bounce 1s infinite;
 }
 
+.card {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  border-radius: 0.5rem;
+  padding: 1rem;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+table th {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: left;
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+table td {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  white-space: nowrap;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -184472,4 +184504,3 @@ select {
             animation: bounce 1s infinite;
   }
 }
-
