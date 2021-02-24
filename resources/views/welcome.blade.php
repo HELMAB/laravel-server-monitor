@@ -15,7 +15,7 @@
             <a href="{{ route('login') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">Start Monitoring</a>
         </div>
         <div class="flex items-center justify-center h-screen bg-green-300 px-12">
-            <div class="w-full rounded" style="background-size: cover; background-image: url({{ asset('img/bg.png') }}); height: 540px;"></div>
+            <div class="w-full rounded-md shadow-xl" style="background-size: cover; background-image: url({{ asset('img/bg.png') }}); height: 540px;"></div>
         </div>
     </div>
 </x-primary-layout>
