@@ -3,7 +3,7 @@
     <div class="grid grid-cols-2 h-screen">
         <div class="flex items-center justify-center h-screen px-12"
              style="background-image: linear-gradient(to bottom right, #f3f4f6, #f3f4f6 50%, #6ee7b7 50%, #6ee7b7);}">
-            <div class="w-full rounded-md shadow-xl" style="background-size: cover; background-image: url({{ asset('img/bg.png') }}); height: 540px;"></div>
+            <div class="w-full rounded-md shadow-xl" style="background-color: #f3f4f6; background-size: contain; background-repeat: no-repeat;background-image: url({{ asset('img/bg.png') }}); height: 540px;"></div>
         </div>
         <div class="flex items-center justify-center h-screen bg-green-300 flex-col text-center">
             <svg viewBox="0 0 20 20"
