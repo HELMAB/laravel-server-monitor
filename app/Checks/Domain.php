@@ -14,15 +14,14 @@ class Domain extends CheckDefinition
     {
         $domain = $this->check->host->domain;
         if (isset($domain)) {
-            /*$client = new Client();
+            $client = new Client();
             try {
                 $request = $client->get($domain);
                 if ($request->getStatusCode() == 200) {
                     $this->check->succeed('is running');
                     return;
                 }
-            } catch (\Exception $exception) {
-            }*/
+            } catch (\Exception $exception) {}
             $this->check->fail('is not running');
         } else {
             $this->check->fail('no domain to check');
