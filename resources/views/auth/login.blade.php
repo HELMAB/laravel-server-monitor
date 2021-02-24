@@ -1,9 +1,10 @@
 <x-guest-layout>
+    <x-slot name="title">Login</x-slot>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
                 <x-logo></x-logo>
-{{--                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />--}}
+                {{--<x-application-logo class="w-20 h-20 fill-current text-gray-500" />--}}
             </a>
         </x-slot>
 

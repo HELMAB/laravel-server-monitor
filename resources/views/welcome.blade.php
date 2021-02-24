@@ -1,5 +1,5 @@
 <x-primary-layout>
-    <x-slot name="title">Monitor</x-slot>
+    <x-slot name="title">Home</x-slot>
     <div class="md:grid md:grid-cols-2 flex flex-col h-screen">
         <div class="flex items-center justify-center h-screen px-12"
              style="background-image: linear-gradient(to bottom right, #f3f4f6, #f3f4f6 50%, #6ee7b7 50%, #6ee7b7);">
