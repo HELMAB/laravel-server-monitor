@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Host extends Model
 {
     use HasFactory;
+
+    public function checks()
+    {
+        return $this->hasMany(Check::class);
+    }
 }

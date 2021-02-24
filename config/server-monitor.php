@@ -20,7 +20,7 @@ return [
      * The default value for how often the checks will run,
      * after the last successful one.
      */
-    'next_run_in_minutes' => env('SERVER_MONITOR_NEXT_RUN_IN_MINUTES', 10),
+    'next_run_in_minutes' => env('SERVER_MONITOR_NEXT_RUN_IN_MINUTES', 1),
 
     /*
      * The performance of the package can be increased by allowing a high number

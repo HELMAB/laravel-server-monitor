@@ -8,19 +8,24 @@ use Symfony\Component\Process\Process;
 
 class Domain extends CheckDefinition
 {
-    public $command = 'systemctl is-active nginx';
+    public $command = '';
 
     public function resolve(Process $process)
     {
-//        $url = 'https://helmab.com';
-//        $client = new Client();
-//        $request = $client->get($url);
-//        if ($request->getStatusCode() == 200) {
-//            $this->check->succeed('is running');
-//
-//            return;
-//        }
-
-        $this->check->fail('is not running');
+        $domain = $this->check->host->domain;
+        if (isset($domain)) {
+            $client = new Client();
+            try {
+                $request = $client->get($domain);
+                if ($request->getStatusCode() == 200) {
+                    $this->check->succeed('is running');
+                    return;
+                }
+            } catch (\Exception $exception) {
+            }
+            $this->check->fail('is not running');
+        } else {
+            $this->check->fail('no domain');
+        }
     }
 }
