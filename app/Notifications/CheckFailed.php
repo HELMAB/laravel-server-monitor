@@ -3,7 +3,7 @@
 namespace App\Notifications;
 
 use NotificationChannels\Telegram\TelegramChannel;
-use NotificationChannels\Telegram\TelegramMessage;
+use NotificationChannels\Telegram\TelegramFile;
 
 class CheckFailed extends \Spatie\ServerMonitor\Notifications\Notifications\CheckFailed
 {
@@ -30,14 +30,16 @@ class CheckFailed extends \Spatie\ServerMonitor\Notifications\Notifications\Chec
 
     /**
      * @param $notifiable
-     * @return TelegramMessage
+     * @return TelegramFile
      */
-    public function toTelegram($notifiable): TelegramMessage
+    public function toTelegram($notifiable): TelegramFile
     {
         $subject = $this->getSubject();
         $content = $this->getMessageText();
-        return TelegramMessage::create()
+
+        return TelegramFile::create()
             ->to(config('services.telegram-bot-api.chat_id'))
-            ->content("*Server Monitor - Check Failed*\n$subject\n$content");
+            ->content("*Server Monitor - Check Failed*\n$subject\n$content")
+            ->file(public_path('img/failed.png'), 'photo');
     }
 }
