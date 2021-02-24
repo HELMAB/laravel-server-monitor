@@ -20,7 +20,7 @@ return [
      * The default value for how often the checks will run,
      * after the last successful one.
      */
-    'next_run_in_minutes' => env('SERVER_MONITOR_NEXT_RUN_IN_MINUTES', 1),
+    'next_run_in_minutes' => env('SERVER_MONITOR_NEXT_RUN_IN_MINUTES', 10),
 
     /*
      * The performance of the package can be increased by allowing a high number
@@ -45,14 +45,14 @@ return [
             Spatie\ServerMonitor\Notifications\Notifications\CheckSucceeded::class => [],
             Spatie\ServerMonitor\Notifications\Notifications\CheckRestored::class => [],
             Spatie\ServerMonitor\Notifications\Notifications\CheckWarning::class => [],
-            Spatie\ServerMonitor\Notifications\Notifications\CheckFailed::class => [],
+            App\Notifications\CheckFailed::class => ['telegram'],
         ],
 
         /*
          * To avoid burying you in notifications, we'll only send one every given amount
          * of minutes when a check keeps emitting warning or keeps failing.
          */
-        'throttle_failing_notifications_for_minutes' => 60,
+        'throttle_failing_notifications_for_minutes' => env('THROTTLE_FAILING_NOTIFICATIONS_FOR_MINUTES', 1),
 
         // Separate the email by , to add many recipients
         'mail' => [

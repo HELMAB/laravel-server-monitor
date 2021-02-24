@@ -16,6 +16,8 @@ class ServerMonitor extends Component
 
     public function mount()
     {
-        $this->checks = Check::orderBy('updated_at')->get();
+        $this->checks = Check::whereHas('host')
+            ->orderBy('updated_at')
+            ->get();
     }
 }

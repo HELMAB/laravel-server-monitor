@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ServerMonitorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +22,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/server-monitor', function () {
-    return view('server-monitor');
-})->middleware(['auth'])->name('server-monitor');
+Route::group(['prefix' => 'server-monitor', 'middleware' => 'auth'], function () {
+    Route::get('', [ServerMonitorController::class, 'index'])->name('server-monitor');
+    Route::get('create', [ServerMonitorController::class, 'create'])->name('create-server-monitor');
+});
 
 require __DIR__.'/auth.php';
