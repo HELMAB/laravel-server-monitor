@@ -5,7 +5,7 @@ namespace App\Notifications;
 use NotificationChannels\Telegram\TelegramChannel;
 use NotificationChannels\Telegram\TelegramMessage;
 
-class CheckFailed extends \Spatie\ServerMonitor\Notifications\Notifications\CheckFailed
+class CheckWarning extends \Spatie\ServerMonitor\Notifications\Notifications\CheckWarning
 {
     /**
      * @param mixed $notifiable
@@ -38,6 +38,6 @@ class CheckFailed extends \Spatie\ServerMonitor\Notifications\Notifications\Chec
         $content = $this->getMessageText();
         return TelegramMessage::create()
             ->to(config('services.telegram-bot-api.chat_id'))
-            ->content("*Server Monitor - Check Failed*\n$subject\n$content");
+            ->content("*Server Monitor - Check Warning*\n$subject\n$content");
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tasks;
+namespace App\Checks;
 
 use GuzzleHttp\Client;
 use Spatie\ServerMonitor\CheckDefinitions\CheckDefinition;
@@ -25,7 +25,7 @@ class Domain extends CheckDefinition
             }
             $this->check->fail('is not running');
         } else {
-            $this->check->fail('no domain');
+            $this->check->fail('no domain to check');
         }
     }
 }

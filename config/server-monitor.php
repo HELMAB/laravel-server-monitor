@@ -12,8 +12,8 @@ return [
         // 'elasticsearch' => Spatie\ServerMonitor\CheckDefinitions\Elasticsearch::class,
         // 'memcached' => Spatie\ServerMonitor\CheckDefinitions\Memcached::class,
         // 'mysql' => Spatie\ServerMonitor\CheckDefinitions\MySql::class,
-        'nginx' => \App\Tasks\Nginx::class,
-        'domain' => \App\Tasks\Domain::class,
+        'nginx' => App\Checks\Nginx::class,
+        'domain' => App\Checks\Domain::class,
     ],
 
     /*
@@ -44,7 +44,7 @@ return [
         'notifications' => [
             Spatie\ServerMonitor\Notifications\Notifications\CheckSucceeded::class => [],
             Spatie\ServerMonitor\Notifications\Notifications\CheckRestored::class => [],
-            Spatie\ServerMonitor\Notifications\Notifications\CheckWarning::class => [],
+            App\Notifications\CheckWarning::class => ['telegram'],
             App\Notifications\CheckFailed::class => ['telegram'],
         ],
 
@@ -52,7 +52,7 @@ return [
          * To avoid burying you in notifications, we'll only send one every given amount
          * of minutes when a check keeps emitting warning or keeps failing.
          */
-        'throttle_failing_notifications_for_minutes' => env('THROTTLE_FAILING_NOTIFICATIONS_FOR_MINUTES', 1),
+        'throttle_failing_notifications_for_minutes' => env('THROTTLE_FAILING_NOTIFICATIONS_FOR_MINUTES', 60),
 
         // Separate the email by , to add many recipients
         'mail' => [

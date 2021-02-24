@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tasks;
+namespace App\Checks;
 
 use Spatie\ServerMonitor\CheckDefinitions\CheckDefinition;
 use Symfony\Component\Process\Process;
