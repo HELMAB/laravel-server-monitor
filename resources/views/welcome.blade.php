@@ -6,6 +6,13 @@
             <h1>LaravelServer<span><strong>Monitor</strong></span></h1>
             <div class="mt-8">
                 <x-button>Get Started</x-button>
+                <div>
+                    <x-host-list>
+                        @foreach(range(0, 2) as $item)
+                            <x-host-item label="{{ $item }}"></x-host-item>
+                        @endforeach
+                    </x-host-list>
+                </div>
             </div>
         </div>
     </div>
