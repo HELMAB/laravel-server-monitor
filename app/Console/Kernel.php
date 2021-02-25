@@ -27,6 +27,9 @@ class Kernel extends ConsoleKernel
         $schedule->command('server-monitor:run-checks')
             ->withoutOverlapping()
             ->everyMinute();
+
+        $schedule->command('monitor:check-uptime')->everyMinute();
+        // $schedule->command('monitor:check-certificate')->daily();
     }
 
     /**

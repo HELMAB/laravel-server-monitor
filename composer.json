@@ -17,7 +17,8 @@
         "laravel/slack-notification-channel": "^2.3",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.3",
-        "spatie/laravel-server-monitor": "^1.9"
+        "spatie/laravel-server-monitor": "^1.9",
+        "spatie/laravel-uptime-monitor": "^4.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
