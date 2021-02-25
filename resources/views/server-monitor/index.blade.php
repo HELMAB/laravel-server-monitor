@@ -1,9 +1,9 @@
 <x-app-layout>
-    <x-slot name="title">{{ __('Server Monitor') }}</x-slot>
+    <x-slot name="title">{{ __('Uptime Monitor') }}</x-slot>
 
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Server Monitor') }}
+            {{ __('Uptime Monitor') }}
         </h2>
     </x-slot>
 

@@ -38,7 +38,7 @@ class UptimeCheckFailed extends \Spatie\UptimeMonitor\Notifications\Notification
 
         return TelegramFile::create()
             ->to(config('services.telegram-bot-api.chat_id'))
-            ->content("*Server Monitor - Check Failed*\n$message")
+            ->content("*Uptime Monitor - UptimeCheckFailed*\n$message")
             ->file(public_path('img/failed.png'), 'photo');
     }
 }

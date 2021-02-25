@@ -13,7 +13,7 @@
             <td class="text-center">
                 <x-uptime-monitor-status status="{{ $monitor->uptime_status }}"></x-uptime-monitor-status>
             </td>
-            <td>{{ $monitor->uptime_check_failure_reason }}</td>
+            <td>{{ $monitor->uptime_check_failure_reason != '' ? $monitor->uptime_check_failure_reason : '_' }}</td>
         </tr>
     @endforeach
     </tbody>

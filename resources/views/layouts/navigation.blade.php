@@ -19,7 +19,7 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('server-monitor')" :active="request()->routeIs('server-monitor')">
-                        {{ __('Server Monitor') }}
+                        {{ __('Uptime Monitor') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('server-monitor')" :active="request()->routeIs('server-monitor')">
-                {{ __('Server Monitor') }}
+                {{ __('Uptime Monitor') }}
             </x-responsive-nav-link>
         </div>
 
