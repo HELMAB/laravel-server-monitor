@@ -38,7 +38,7 @@ class UptimeCheckRecovered extends \Spatie\UptimeMonitor\Notifications\Notificat
 
         return TelegramFile::create()
             ->to(config('services.telegram-bot-api.chat_id'))
-            ->content("*Uptime Monitor - UptimeCheckRecovered*\n$message")
+            ->content("*Recovered*\n$message")
             ->file(public_path('img/success.png'), 'photo');
     }
 }

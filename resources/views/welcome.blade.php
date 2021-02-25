@@ -6,7 +6,7 @@
         </div>
         <div class="monitor-right">
             <x-logo color="#317D5F"></x-logo>
-            <h1 class="text-2xl font-bold">Server Monitoring</h1>
+            <h1 class="text-2xl font-bold">Uptime Monitor</h1>
             <h3 class="py-3 text-lg">Don't let your servers just melt down</h3>
             <p class="py-3 text-gray-900">
                 We all dream of servers that need no maintenance at all.<br/>But unfortunately
