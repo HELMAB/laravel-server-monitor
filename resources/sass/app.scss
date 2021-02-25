@@ -13,3 +13,32 @@ table th {
 table td {
     @apply px-2 py-4 whitespace-nowrap text-lg text-gray-500;
 }
+
+table tbody tr:hover {
+    @apply bg-green-100;
+}
+
+.monitor-container {
+    @apply md:grid md:grid-cols-2 flex flex-col h-screen;
+}
+
+.monitor-left {
+    @apply flex items-center justify-center h-screen px-12;
+    background-image: linear-gradient(to bottom right, #f3f4f6, #f3f4f6 50%, #6ee7b7 50%, #6ee7b7);
+}
+
+.monitor-left-bg {
+    @apply w-full rounded-md shadow-xl md:h-screen;
+    background-color: #f3f4f6;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+
+.monitor-right {
+    @apply flex items-center justify-center h-screen bg-green-300 flex-col text-center;
+}
+
+.btn-start-monitoring {
+    @apply inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150;
+}
