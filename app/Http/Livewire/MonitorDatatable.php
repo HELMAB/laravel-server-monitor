@@ -25,7 +25,9 @@ class MonitorDatatable extends LivewireDatatable
             Column::callback(['uptime_status'], function ($uptime_status) {
                  return view('status', ['status' => $uptime_status]);
             })->label('STATUS'),
-            Column::name('uptime_check_failure_reason')->label('FAILURE_REASON'),
+            Column::callback(['uptime_check_failure_reason'], function ($uptime_check_failure_reason) {
+                return $uptime_check_failure_reason != '' ? $uptime_check_failure_reason : '_';
+            })->label('FAILURE_REASON'),
         ];
     }
 }
