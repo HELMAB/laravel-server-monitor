@@ -64,14 +64,5 @@ class UserTableSeeder extends Seeder
                 'email_verified_at' => Carbon::now()
             ]);
         }
-
-        $users = User::get();
-        foreach ($users as $user) {
-            Team::create([
-                'user_id' => $user->id,
-                'name' => "$user->name's Group",
-                'personal_team' => '1',
-            ]);
-        }
     }
 }
