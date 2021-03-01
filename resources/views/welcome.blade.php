@@ -1,5 +1,5 @@
 <x-primary-layout>
-    <x-slot name="title">Home</x-slot>
+    <x-slot name="title">Dashboard</x-slot>
     <div class="monitor-container">
         <div class="monitor-left">
             <div class="monitor-left-bg" style="background-image: url({{ asset('img/bg.png') }});"></div>

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Team;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
@@ -57,10 +58,19 @@ class UserTableSeeder extends Seeder
 
         foreach ($users as $user) {
             User::create([
-                'name' => $user['first_name'] ." ".$user['last_name'],
+                'name' => $user['first_name'] . " " . $user['last_name'],
                 'email' => $user['email'],
                 'password' => $user['password'],
                 'email_verified_at' => Carbon::now()
+            ]);
+        }
+
+        $users = User::get();
+        foreach ($users as $user) {
+            Team::create([
+                'user_id' => $user->id,
+                'name' => "$user->name's Group",
+                'personal_team' => '1',
             ]);
         }
     }

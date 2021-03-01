@@ -11,8 +11,9 @@
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.2.1",
+        "@tailwindcss/typography": "^0.3.0",
         "alpinejs": "^2.7.3",
-        "autoprefixer": "^10.1.0",
+        "autoprefixer": "^10.0.2",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
@@ -20,7 +21,7 @@
         "postcss-import": "^12.0.1",
         "sass": "^1.32.8",
         "sass-loader": "^8.0.2",
-        "tailwindcss": "^2.0.2"
+        "tailwindcss": "^2.0.1"
     },
     "dependencies": {
         "css-loader": "^5.0.2"

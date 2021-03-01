@@ -27,4 +27,4 @@ Route::group(['prefix' => 'server-monitor', 'middleware' => 'auth'], function ()
     Route::get('create', [ServerMonitorController::class, 'create'])->name('create-server-monitor');
 });
 
-require __DIR__.'/auth.php';
+//require __DIR__.'/auth.php';
